@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --content './src/**/*.html' && cp ./src/index.html ./dist/index.html"
-},
+  "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --content './src/**/*.html' && cp ./src/index.html ./dist/index.html && cp ./src/index.js ./dist/index.js"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
