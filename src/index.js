@@ -1,6 +1,14 @@
 const display=document.getElementById('display');
 //  let newValue='';
+let resultDisplayed = false;
+
 function appendvalue(value){
+    if(resultDisplayed){
+        display.value='';
+        resultDisplayed=false;
+        appendvalue(value)
+        preventDefault();
+    }
    console.log('Current display before append:', display.value, 'Appending value:', value);
    
     // newValue+=value ;
@@ -21,6 +29,7 @@ function deletelast(){
 function calculate(){
     try {
         display.value=eval(display.value);
+        resultDisplayed=true;
     } catch (error) {
         display.value='Error';
     }
